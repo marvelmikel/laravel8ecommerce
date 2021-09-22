@@ -17,7 +17,7 @@
 					<div class=" main-content-area">
 						<div class="wrap-login-item ">
 							<div class="login-form form-item form-stl">
-                                
+                                <x-jet-validation-errors class="mb-4"/>
 								<form name="frm-login" method="POST" action="{{route('login')}}">
                                     @csrf
 									<fieldset class="wrap-title">
@@ -25,7 +25,7 @@
 									</fieldset>
 									<fieldset class="wrap-input">
 										<label for="frm-login-uname">Email Address:</label>
-										<input type="email" id="frm-login-uname" name="email" placeholder="Type your email address": value="old('email')" required autofocus>
+										<input type="email" id="frm-login-uname" name="email" placeholder="Type your email address" :value="old('email')" required autofocus>
 									</fieldset>
 									<fieldset class="wrap-input">
 										<label for="frm-login-pass">Password:</label>
